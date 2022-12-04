@@ -13,13 +13,13 @@ int GetNumber(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int AckermannFunction(int start, int end)
+int AckermannFunction(int m, int n)
 {
-    while (start != 0)
+    while (m != 0)
     {
-        if (end == 0) end = 1;
-        else end = AckermannFunction(start, end - 1);
-        start = start - 1;
+        if (n == 0) n = 1;
+        else n = AckermannFunction(m, n - 1);
+        m = m - 1;
     }
-    return end + 1;
+    return n + 1;
 }
